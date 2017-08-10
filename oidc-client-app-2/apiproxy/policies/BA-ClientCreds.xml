@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BasicAuthentication async="false" continueOnError="false" enabled="true" name="BA-ClientCreds">
+    <DisplayName>BA-ClientCreds</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <AssignTo createNew="false">oidc.client_creds</AssignTo>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <Operation>Encode</Operation>
+    <Password ref="oidc.client_secret"/>
+    <Source></Source>
+    <User ref="oidc.client_id"/>
+</BasicAuthentication>

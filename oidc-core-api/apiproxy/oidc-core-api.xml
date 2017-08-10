@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="oidc-core-api">
+    <Basepaths>/oidc-sample/oidc</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1502340371446</CreatedAt>
+    <CreatedBy>ssudhindra@google.com</CreatedBy>
+    <DisplayName>oidc-core-api</DisplayName>
+    <LastModifiedAt>1502341409255</LastModifiedAt>
+    <LastModifiedBy>ssudhindra@google.com</LastModifiedBy>
+    <Policies>
+        <Policy>AM-GoLogin</Policy>
+        <Policy>AM-SendAuthCode</Policy>
+        <Policy>AM-SendToken</Policy>
+        <Policy>JC-JWTGenerate</Policy>
+        <Policy>JS-SetConfig</Policy>
+        <Policy>OA-AccessToken</Policy>
+        <Policy>OA-AuthCode</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>java://edge-jwt-generate.jar</Resource>
+        <Resource>java://jose4j-0.5.7.jar</Resource>
+        <Resource>jsc://SetConfig.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout async="false" continueOnError="false" enabled="true" name="JC-JWTGenerate">
+    <DisplayName>JC-JWTGenerate</DisplayName>
+    <FaultRules/>
+    <Properties>
+        <Property name="jws-algo">RSA_USING_SHA256</Property>
+        <Property name="claims-json">{oidc.claims_json}</Property>
+        <Property name="jws-key-pass">123</Property>
+        <Property name="iss">oidc-authcode-api</Property>
+        <Property name="jws-key">-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIE6TAbBgkqhkiG9w0BBQMwDgQIh52IJa6i0TACAggABIIEyAKXYcajrZWfvvH3eCRtMgGn4v0MaH39hYnYLF3Y3AyEJDkCPJ9jVzK1LBhYpe2kl7JFVfI8uR+ofNxD4xTRrevWrq4ejtI1eL1e+38Y68wVf389W5t2KGxTEltiiOBd6l2ANon5nAPE8IL6VfF38FGbgSIvMER33j0tjAKHumd817qj9QqIyIOD8H959JZZ+QlfaIvPFrtzvAwjQBjyGgr8XybVHUdT+9XAUrFCMMREKDGW2CaO94JI4Ca6noL9KT4L57vbXa2zYeEKyr2Bnpni27Qvb/a0I8Eml2GLC6fM/ZDOgi8RoYyMtyhaHTYPAy0oRAL2w3WjO7iomw7d6WKqqnATAn40T9rRK7anvbyv6kMxM6kwaQOfjCR/3tgrlVC2Q5MNnsBvsxUpKlg81GL++xZoTXw6znuaY5DCBNNj7CRSES/taE2PrDxy/2wv6UwVlwznqj1GPmCC4ri5Y7M1RhtlbTFaPC18wapG34rAeg2RJ22/oJmGbQv/m/nOxnUXqYjTX5T6oOxCmBQbUTOOVETbFcHrDptvntQ9hakMl9OhtnhhRqkYwSfvvRTa+cAq/Cbp+RI1hURTmL4gp0/qMFljNSWbGfPSIwKyJcvvgmPkSYDtV0m1t25RNiaCiMdmD0GR/68sWvtL09PI/Cn4eK4oV2wF9qvF5R4YkFgWZvg73yyepeuXfe6PeDOQSJp3mYDzwgiy1Dpt96QRPgGHYJJk5Z6+jv4KX45NTuXrZl/WXP4bOcQUDAc/ezJaanUeQxfsR2enGoVkWJmo12CnK6ZgyVRXG7G/0AxmANnhO7rB6i8K1aGl3jZqOnYilI7fw44bl1TMqEyNG8F9GTfGKoEn0vJq0v4kbznGVHCkxSZI0uzHPnt8CgRnz3CWfSecv9slf3z6rVMJesF1JLy7CeYclB0G5EBW/PsvqpbMDZQYC+iZNnS+KGdTt4cq9WWudkJrs2Ge+jAJHVTvUSXWbJTOflavkBqqaheSMlr72bZj0KjMkaEuSCKNluN06FU//gnE5oxstAnaLacJUHpHSaOb2GNRNCoO60lTPvFtTWNJTr4rGTIC3xAFCspiNiqJZ/R9BqYxAxzHNP0/fNPth8r6tLYcmLbWNrupvPYsj16lX1g4hBHAy49LOZf7WwP5bSVDNmC5C3LJ5JMF+cuk3dg5HjWLmolUzRqZ1NZEHgcv6k6Wm5jcJj+xLgp/RS7K6l/DSlcFCoPsq4RI9Og7jCqujr41zz0DkiSjz1X8eQIgC1zGacquCcUXJ0cLSevxHuZoQJlxijSklR5k6m7qIKEGpJS9J8SMRWpr26mMZ22VEwtPewuVjtxIpyJhpk/MfMZeyvOQMaZ486OC2kyz7G/dH9AlRthtotC/Ae5+qLmI05so1O0xGV1HzCpt4p8xg6Tc7AP3GWkPEjsUBw8MZl0iqe6IKEP7M+299RQacARudqgOEP+ghp0ASKiyw3cKLl//CZtlUUo4ryDxOQONDCG5M0S/TmLoi6Sih8xuMww8CPWi62Lc4rkClxRgVSHIp0MnWkuipMhB5J7ONNyM6G2UffSd/zmB5lNPdAPGc5GIYr1LryJ9tlwjrq4rF05sAGNsjy2rqeWVW+LYGyOFpSq91QC+6w==
+-----END ENCRYPTED PRIVATE KEY-----</Property>
+        <Property name="jws">true</Property>
+        <Property name="aud">client-app</Property>
+        <Property name="expiry">5</Property>
+    </Properties>
+    <ClassName>com.apigeecs.jwt.JWTGenerator</ClassName>
+    <ResourceURL>java://edge-jwt-generate.jar</ResourceURL>
+</JavaCallout>

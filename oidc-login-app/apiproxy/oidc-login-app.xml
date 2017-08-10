@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="9" name="oidc-login-app">
+    <Basepaths>/oidc-sample/login</Basepaths>
+    <Basepaths>/oidc-sample/login</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1502317078771</CreatedAt>
+    <CreatedBy>ssudhindra@google.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>oidc-login-app</DisplayName>
+    <LastModifiedAt>1502317078771</LastModifiedAt>
+    <LastModifiedBy>ssudhindra@google.com</LastModifiedBy>
+    <Policies/>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://app.js</Resource>
+        <Resource>node://package.json</Resource>
+        <Resource>node://views/login.pug</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

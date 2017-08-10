@@ -1,0 +1,17 @@
+{
+  "name": "oidc-login-app",
+  "version": "0.0.1",
+  "description": "Login app for OIDC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Srinivas Sudhindra <ssudhidnra@google.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4",
+    "body-parser": "^1.17.2",
+    "pug": "^2.0.0-rc.3",
+    "request": "^2.81.0"
+  }
+}

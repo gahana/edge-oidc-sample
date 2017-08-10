@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title Login App - Sign In Page
+  body
+    h1 Login App - Sign In Page
+    form(method='POST')
+        label(for='username') Username:
+        input(type='text', placeholder='Enter your username' name='username' value='friend')
+        br
+        label(for='password') Password:
+        input(type='password', placeholder='Enter your password' name='password')
+        br
+        input(type='hidden', name='client_id', value=client_id)
+        input(type='hidden', name='redirect_uri', value=redirect_uri)
+        input(type='hidden', name='scope', value=scope)
+        input(type='hidden', name='state', value=state)
+        button(type='submit') Submit
+

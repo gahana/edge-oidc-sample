@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="OA-AccessToken">
+    <DisplayName>OA-AccessToken</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Code>request.formparam.code</Code>
+    <Attributes/>
+    <ExpiresIn>600000</ExpiresIn>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <GrantType>request.formparam.grant_type</GrantType>
+    <Operation>GenerateAccessToken</Operation>
+    <ReuseRefreshToken>false</ReuseRefreshToken>
+    <SupportedGrantTypes>
+        <GrantType>authorization_code</GrantType>
+    </SupportedGrantTypes>
+    <Tokens/>
+</OAuthV2>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-GetTokens">
+    <DisplayName>EV-GetTokens</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="access_token">
+            <JSONPath>$.access_token</JSONPath>
+        </Variable>
+        <Variable name="id_token">
+            <JSONPath>$.id_token</JSONPath>
+        </Variable>
+        <Variable name="refresh_token">
+            <JSONPath>$.refresh_token</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">TokenResponse</Source>
+    <VariablePrefix>oidc</VariablePrefix>
+</ExtractVariables>

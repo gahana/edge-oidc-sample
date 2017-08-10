@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout async="false" continueOnError="false" enabled="true" name="JC-JWTValidate">
+    <DisplayName>JC-JWTValidate</DisplayName>
+    <FaultRules/>
+    <Properties>
+        <Property name="jws-algo">RSA_USING_SHA256</Property>
+        <Property name="iss">oidc-authcode-api</Property>
+        <Property name="jwt">{oidc.jwt}</Property>
+        <Property name="jws-key">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxoE/tMVvp1JqQ/1eGATl1aq+ciUXrGJ8yekFh6F4QhcModrQb15ojvbaQ11ZseLu3tswsdMP5oLKe9ZtvRWAhYX1APINo1sCQBYQZNf9L015iCYSYDCQucRziLWk4K+QXYG7sZIA/8Gb/rbamtBLho16UNaAzkbrR7+rdrRyCyDeyQ9tIfOnSPmjiP0o705sybRs86cfbgOg6yUG3WEU/v5mhg+g+zM3R1nMIgyE1QEKM9zgwvbbR0IkN3L5N0XJFWvR0XNEes5XTHPmh0O6PI4m6vic1UhwyWFy513p4e0tRAIKeU9pCDT1HFTHWPX2gKB9RcuEFxSxczXCc6RCPwIDAQAB
+-----END PUBLIC KEY-----</Property>
+        <Property name="jws">true</Property>
+        <Property name="aud">client-app</Property>
+    </Properties>
+    <ClassName>com.apigeecs.jwt.JWTValidator</ClassName>
+    <ResourceURL>java://edge-jwt-validate.jar</ResourceURL>
+</JavaCallout>

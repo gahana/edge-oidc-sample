@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-GetToken">
+    <DisplayName>SC-GetToken</DisplayName>
+    <Request clearPayload="true">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+            <Headers>
+                <Header name="Authorization">{oidc.client_creds}</Header>
+            </Headers>
+            <FormParams>
+                <FormParam name="grant_type">authorization_code</FormParam>
+                <FormParam name="code">{request.queryparam.code}</FormParam>
+                <FormParam name="redirect_uri">{oidc.redirect_uri}</FormParam>
+            </FormParams>
+            <Verb>POST</Verb>
+        </Set>
+    </Request>
+    <Response>TokenResponse</Response>
+    <HTTPTargetConnection>
+        <URL>https://{oidc.resource_host}/{oidc.token_path}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>
