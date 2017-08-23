@@ -1,7 +1,7 @@
 // Set the below variables as per env
-var client_id = '<App 2 Consumer Key>';
-var client_secret = '<App 2 Consumer Secret>';
-var scope = 'openid';
+var client_id = '<App 1 Consumer Key>';
+var client_secret = '<App 1 Consumer Secret>';
+var scope = 'openid profile email';
 var callback_path = '/oidc-sample/app1/callback';
 var authorize_path = '/oidc-sample/oidc/authorize';
 var resource_path = 'oidc-sample/app1/resource'; // No leading '/''

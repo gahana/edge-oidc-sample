@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 
-var AUTH_URL = 'https://srinisref-test.apigee.net/oidc-sample/oidc/authcode';
+var AUTH_URL = 'https://org-env.apigee.net/oidc-sample/oidc/authcode';
 
 var app = express();
 app.set('views', './views');
@@ -14,15 +14,32 @@ app.get('/', function(req, res) {
     client_id: req.query.client_id,
     redirect_uri: req.query.redirect_uri,
     scope: req.query.scope,
-    state: req.query.state
+    state: req.query.state,
+    app_name: req.query.app_name
   });
 });
 
 app.post('/', function(req, res) {
   if ("friend" === req.body.username) {
-    getAuthCode(req, res);
+    console.log("Scope list: " + req.body.scope);
+    res.render('consent', { 
+      scopeList: req.body.scope.split(" "),
+      client_id: req.body.client_id,
+      redirect_uri: req.body.redirect_uri,
+      scope: req.body.scope,
+      state: req.body.state,
+      app_name: req.body.app_name
+    });
   } else {
     res.status(401).send("Only a friend can enter");
+  }
+});
+
+app.post('/consent', function(req, res) {
+  if ("allow" === req.body.consent) {
+    getAuthCode(req, res);
+  } else {
+    res.status(401).send("User denied consent");
   }
 });
 

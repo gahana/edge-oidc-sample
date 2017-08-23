@@ -5,7 +5,11 @@
     <Flows>
         <Flow name="Authorize">
             <Description/>
-            <Request/>
+            <Request>
+                <Step>
+                    <Name>VAK-VerifyClientId</Name>
+                </Step>
+            </Request>
             <Response>
                 <Step>
                     <FaultRules/>
