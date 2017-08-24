@@ -4,8 +4,8 @@
     <FaultRules/>
     <Properties/>
     <Set>
-        <Payload contentType="text/plain">OIDC Web App 2</Payload>
+        <Payload contentType="text/plain">Successfully accessed a protected resource in App 2</Payload>
     </Set>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
-    <AssignTo type="response" transport="http" createNew="false"></AssignTo>
+    <AssignTo type="response" transport="http" createNew="false"/>
 </AssignMessage>

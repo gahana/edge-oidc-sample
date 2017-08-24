@@ -3,9 +3,9 @@
     <DisplayName>EV-BearerToken</DisplayName>
     <FaultRules/>
     <Properties/>
-    <Header name="Authorization">
-        <Pattern ignoreCase="true">Bearer {jwt}</Pattern>
-    </Header>
+    <QueryParam name="jwt">
+        <Pattern ignoreCase="true">{jwt}</Pattern>
+    </QueryParam>
     <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
     <Source clearPayload="false">request</Source>
     <VariablePrefix>oidc</VariablePrefix>

@@ -2,8 +2,8 @@
 
 BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 USAGE="Usage: deploy [all|oidc|login|app1|app2]"
-ORG="org-env"
-ENV="dev"
+ORG="org"
+ENV="env"
 
 if [ -z "$1" ]; then
 	set -- "all"

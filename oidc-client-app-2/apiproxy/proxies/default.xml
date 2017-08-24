@@ -9,15 +9,8 @@
     </DefaultFaultRule>
     <Description/>
     <FaultRules>
-        <FaultRule name="InvalidJWT">
-            <Condition>(fault.name = "ExecutionReturnedFailure") and (JWTValidatorResult = "Failure")</Condition>
-            <Step>
-                <FaultRules/>
-                <Name>AM-Unauthorized</Name>
-            </Step>
-        </FaultRule>
         <FaultRule name="InvalidRequest">
-            <Condition>(proxy.pathsuffix MatchesPath "/resource") and (oidc.jwt = null)</Condition>
+            <Condition>(proxy.pathsuffix MatchesPath "/resource") and ((oidc.jwt = null) or ((fault.name = "ExecutionReturnedFailure") and (JWTValidatorResult = "Failure")))</Condition>
             <Step>
                 <FaultRules/>
                 <Name>AM-GoAuthorize</Name>
@@ -39,6 +32,7 @@
             </Request>
             <Response>
                 <Step>
+                    <FaultRules/>
                     <Name>AM-Response</Name>
                 </Step>
             </Response>
@@ -66,7 +60,7 @@
             </Request>
             <Response>
                 <Step>
-                    <Name>SC-RetryWithToken</Name>
+                    <Name>AM-RetryWithToken</Name>
                 </Step>
             </Response>
             <Condition>(proxy.pathsuffix MatchesPath "/callback") and (request.verb = "GET")</Condition>

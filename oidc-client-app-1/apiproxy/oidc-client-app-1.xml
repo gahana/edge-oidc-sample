@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="2" name="oidc-client-app-1">
-    <Basepaths>/oidc-sample/app1</Basepaths>
+<APIProxy revision="4" name="oidc-client-app-1">
     <Basepaths>/oidc-sample/app1</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1502341922280</CreatedAt>
+    <CreatedAt>1503555794540</CreatedAt>
     <CreatedBy>ssudhindra@google.com</CreatedBy>
     <DisplayName>oidc-client-app-1</DisplayName>
-    <LastModifiedAt>1502342599466</LastModifiedAt>
+    <LastModifiedAt>1503557178312</LastModifiedAt>
     <LastModifiedBy>ssudhindra@google.com</LastModifiedBy>
     <Policies>
         <Policy>AM-GoAuthorize</Policy>
         <Policy>AM-Response</Policy>
+        <Policy>AM-RetryWithToken</Policy>
         <Policy>AM-ServerError</Policy>
-        <Policy>AM-Unauthorized</Policy>
         <Policy>BA-ClientCreds</Policy>
         <Policy>EV-BearerToken</Policy>
         <Policy>EV-GetTokens</Policy>
@@ -20,7 +19,6 @@
         <Policy>JS-GetState</Policy>
         <Policy>JS-SetConfig</Policy>
         <Policy>SC-GetToken</Policy>
-        <Policy>SC-RetryWithToken</Policy>
     </Policies>
     <ProxyEndpoints>
         <ProxyEndpoint>default</ProxyEndpoint>
